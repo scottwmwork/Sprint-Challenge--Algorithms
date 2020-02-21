@@ -1,10 +1,15 @@
-'''
-Your function should take in a single parameter (a string `word`)
-Your function should return a count of how many occurences of ***"th"*** occur within `word`. Case matters.
-Your function must utilize recursion. It cannot contain any loops.
-'''
 def count_th(word):
-    
-    # TBC
-    
-    pass
+	count = []
+
+	def find_th(n):
+		# Base case 1
+		if n < 0:
+			return
+		if word[n] == 't' and word[n + 1] == 'h':
+			count.append('')
+		
+		find_th(n - 1)
+
+	find_th(len(word)-2)
+	return len(count)
+
